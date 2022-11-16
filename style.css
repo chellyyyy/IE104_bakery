@@ -26,12 +26,16 @@ h2 {
     --height-header : 60px;
 }
 #header {
+    position: sticky;
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: var(--height-header);
     background-color: #fff;
     color: #000;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    top: 0;
 }
 .nav-left {
     height: 100%;
@@ -51,7 +55,7 @@ h2 {
     margin-right: 14px;
 }
 .brand-heading {
-    color: #485c76;
+    color: #4B6587;
     letter-spacing: 3px;
     font-size: 24px;
 }
@@ -84,6 +88,10 @@ h2 {
 }
 .menu-item:first-child:hover .sub-nav-list {
     display: block;
+}
+.menu-item:hover {
+    color: #4B6587;
+    border-bottom: 5px solid #4B6587;
 }
 .sub-nav-list {
     list-style: none;
@@ -162,8 +170,6 @@ h2 {
 
 /* footer */
 .footer_top {
-
-
     background: #F0E5CF;
     height: 200px;
     width: 100vw;
@@ -296,6 +302,7 @@ li i {
     object-position: center;
     font-size: 30px;
     color: #272727;
+    text-align:justify;
 }
 
 
