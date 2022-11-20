@@ -6,6 +6,7 @@
     font-family: 'Montserrat';
 }
 
+/* noti */
 #noti {
     display: flex;
     background: #F0E5CF;
@@ -25,6 +26,7 @@
     letter-spacing: -0.02em;
 
     color: #4B6587;
+    text-transform: capitalize;
 }
 #noti .noti_content .input_email {
     /* position: absolute; */
@@ -95,4 +97,63 @@
     background: #F0E5CF;
     color: #4B6587;
     border: 2px solid #4B6587;
+}
+
+/* delivery */
+#delivery{
+    display: flex;
+    height: auto;
+    padding: 3em;
+}
+#delivery .deli_content {
+    display: block;
+    margin: auto;
+}
+#delivery .deli_content h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: 10px;
+    width: max-content;
+
+    background: #F0E5CF;
+    border-radius: 36px;
+
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    text-align: center;
+    text-transform: capitalize;
+}
+#delivery .deli_content .deli_container {
+    display: flex;
+    margin: auto;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 3em;
+}
+#delivery .deli_content .deli_container .deli_item {
+    display: block;
+    text-align: center;
+    justify-content: space-around;
+    padding: 2em;
+    height: 200px;
+    width: 200px;
+}
+#delivery .deli_content .deli_container i {
+    display: inherit;
+    font-size: 100px;
+    text-align: center;
+    padding: 10px;
+}
+#delivery .deli_content .deli_container p {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    /* identical to box height */
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #000000;
 }
