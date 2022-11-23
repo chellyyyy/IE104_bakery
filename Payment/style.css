@@ -2,14 +2,16 @@
     border: none;
     padding: 0;
     box-sizing: border-box;
+    position: relative;
 }
+
+
 
 .content-header {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    margin-top: 30px;
 
 }
 
@@ -48,6 +50,11 @@
 .sidebar li:hover {
     background-color: white;
     cursor: pointer;
+    color: bisque;
+}
+
+.active {
+    background-color: white;
     color: bisque;
 }
 
@@ -172,4 +179,22 @@ label {
 
 .hide {
     display: block !important;
+}
+
+.show-popup {
+    display: flex !important;
+}
+
+.popup {
+    display: none;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(195, 188, 188, 0.5);
 }
