@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/yourcode.js"></script>
+
+    <script>//<![CDATA[
+        $('input.input-qty').each(function () {
+            var $this = $(this),
+                qty = $this.parent().find('.is-form'),
+                min = Number($this.attr('min')),
+                max = Number($this.attr('max'))
+            if (min == 0) {
+                var d = 0
+            } else d = min
+            $(qty).on('click', function () {
+                if ($(this).hasClass('minus')) {
+                    if (d > min) d += -1
+                } else if ($(this).hasClass('plus')) {
+                    var x = Number($this.val()) + 1
+                    if (x <= max) d += 1
+                }
+                $this.attr('value', d).val(d)
+            })
+        })
+    //]]></script>
+</head>
+
+<body>
+    <header id="header">
+        <div class="nav-left">
+            <div class="brand">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/800px-Google_%22G%22_Logo.svg.png"
+                    alt="" class="brand-img">
+                <h1 class="brand-heading">Sun Cake</h1>
+            </div>
+        </div>
+        <div class="nav-center">
+            <ul class="menu-list">
+                <li class="menu-item">
+                    <div class="sub-nav"><a href="">
+                            Thực đơn </a><i class="fa-solid fa-angle-down"></i>
+
+                        <ul class="sub-nav-list">
+                            <li class="sub-nav-item">Bánh xu kem</li>
+                            <li class="sub-nav-item">Bánh bông lan</li>
+                            <li class="sub-nav-item">Bánh kem</li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="menu-item"><a href="">Giới thiệu</a></li>
+                <li class="menu-item"><a href="">Liên hệ</a></li>
+            </ul>
+        </div>
+        <div class="nav-right">
+            <div class="search">
+                <input type="text" class="input-search" placeholder="Tìm kiếm">
+                <div class="search-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+            <div class="personal">
+                <i class="fa-solid fa-person"></i>
+            </div>
+            <div class="cart">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span class="amount">1</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Content -->
+
+
+    <nav>
+        <h2>GIỎ HÀNG</h2>
+        <button type="button" onclick="QUAY_LẠI_MUA_HÀNG()" class="gh">
+            <a href="#" class="previous_round">&#8249;</a>QUAY LẠI MUA HÀNG</button>
+        <script>
+            function QUAY_LẠI_MUA_HÀNG() {
+                history.back();
+            }
+        </script>
+    </nav>
+    <main class="grid">
+        <section>
+            <ul>
+                <li class="main-product">
+                    <div class="img-product">
+                        <img src="Danish_Pastry.png">
+                    </div>
+                    <div class="content-product">
+                        <p><b>Danish Pastry</b></p>
+                        <p><i class="fas fa-calendar-days"></i>04/11/2022</p>
+                        <p><i class="fas fa-clock"></i>10 AM</p>
+                        <p><i class="fas fa-file-pen"></i>Ghi chú</p>
+                    </div>
+                    <div class="buttons_added">
+                        <input class="minus is-form" type="button" value="-">
+                        <input aria-label="quantity" class="input-qty" max="10" min="1" name="" type="number" value="1">
+                        <input class="plus is-form" type="button" value="+">
+                    </div>
+                    <div class="tien">
+                        <div>
+                            <span class="money">100.000đ</span>
+                        </div>
+                        <div>
+                            <h6>Xóa<i class="fas fa-trash-can"></i></h6>
+                        </div>
+                    </div>
+                </li>
+                <li class="main-product">
+                    <div class="img-product">
+                        <img src="Danish_Pastry.png">
+                    </div>
+                    <div class="content-product">
+                        <p><b>Danish Pastry</b></p>
+                        <p><i class="fas fa-calendar-days"></i>04/11/2022</p>
+                        <p><i class="fas fa-clock"></i>3 PM - 8 PM</p>
+                        <p><i class="fas fa-file-pen"></i>Ghi chú</p>
+                    </div>
+                    <div class="buttons_added">
+                        <input class="minus is-form" type="button" value="-">
+                        <input aria-label="quantity" class="input-qty" max="10" min="1" name="" type="number" value="1">
+                        <input class="plus is-form" type="button" value="+">
+                    </div>
+                    <div class="tien">
+                        <div>
+                            <span class="money">100.000đ</span>
+                        </div>
+                        <div>
+                            <h6>Xóa<i class="fas fa-trash-can"></i></h6>
+                        </div>
+                    </div>
+
+                </li>
+
+            </ul>
+
+        </section>
+
+        <aside>
+            <div class="bill">
+                <div>
+                    <h3 class="thanh_toan">THANH TOÁN</h3>
+                </div>
+                <div>
+                    <div class="tong_cong">Tổng Cộng:<span class="money">200.000đ</span></div>
+                    <div class="pvc">Phí Vận Chuyển:<span class="money">10.000đ</span></div>
+                </div>
+                <div>
+                    <div class="tong_thanh_toan">Tổng Thanh Toán:<span class="money">210.000đ</span></div>
+                    <div><button tyle="button" class="tc">TIẾP TỤC THANH TOÁN</button></div>
+                </div>
+            </div>
+            <div class="voucher">
+                <div>
+                    <h3><b><i class="fas fa-ticket"></i>VOUCHER</b></h3>
+                </div>
+                <div>
+                    <form>
+                        <div>
+                            <input type="text" name="Coupon" placeholder="Nhập mã Coupon">
+                        </div>
+                        <div>
+                            <button type="button" class="coupon">ÁP DỤNG</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </aside>
+    </main>
+
+    <footer>
+        <div class="top">
+            <div class="img">
+                <div>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/800px-Google_%22G%22_Logo.svg.png"
+                        alt="" class="brand-img">
+                </div>
+                <div>
+                    <h1 class="brand-heading">Sun Cake</h1>
+                </div>
+            </div>
+            <div class="dm">
+                <div class="dm1">
+                    <h3>THỰC ĐƠN</h3>
+                </div>
+                <div class="dm2">
+                    <h3>GIỚI THIỆU</h3>
+                </div>
+                <div class="dm3">
+                    <h3>LIÊN HỆ</h3>
+                </div>
+            </div>
+        </div>
+        <div class="bottom">
+            <div><i class="fas fa-circle-c"></i>2022 UIT</div>
+            <div class="icons">
+                <i class=""></i>
+            </div>
+        </div>
+
+    </footer>
+</body>
+
+</html>
