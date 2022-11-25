@@ -1,0 +1,63 @@
+
+h1{
+    color: rgb(98, 162, 230);
+    
+}
+h2{
+    color: gray;
+    
+}
+p{
+    color:  rgb(98, 162, 230);
+
+}
+
+button{
+    color:white;
+    background-color: rgb(98, 162, 230);
+    width: 200px;
+}
+img{
+    display:inline;    
+    border-radius:5%;
+    width:1601px;
+    height: 1900px;
+}
+aside{
+    float: right;
+    width: 50%;
+    height:100%;
+}
+
+section {
+    float:left;
+    height: 1900px;
+    width: 900px;
+    padding: 100px 300px 0px 300px;
+    
+}
+form{
+    width:100%;
+    height: 1900px;
+    font-size: 40px;
+}
+footer{
+    height:0%;
+}
+input {
+    width: 100px;
+    height: 40px;
+
+}
+
+img {
+    width: 20px;
+    height: 20px;
+    padding-right: 5px;
+}
+.button{
+    background-color:white;
+    color:rgb(98, 162, 230);
+}
+    
+
