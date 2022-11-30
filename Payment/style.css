@@ -1,44 +1,90 @@
 * {
     border: none;
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
     position: relative;
     font-family: 'Montserrat';
 }
 
-
+.container {
+    margin: 50px 10vh;
+}
 
 .content-header {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    margin-bottom: 20px;
+}
 
+.content-header>h2 {
+    /* Giỏ hàng */
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 44px;
+
+    text-align: center;
+    text-transform: uppercase;
 }
 
 .content-header>div {
-    width: 100px;
+    width: 99px;
     height: 2px;
-    background-color: #333;
+
+    background: #000;
+    /* text-align: center; */
+    margin: auto;
 }
 
 .btn-light {
-    border: 1px solid #333;
+    cursor: pointer;
+    text-align: center;
+    background-color: #fff;
+    padding: 15px 35px;
+
+    border: 1px solid #4B6587;
+    border-radius: 5px;
+    /* quay lại MUA hàng */
+    font-weight: 300;
+    font-size: 16.2px;
+    line-height: 20px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+
+    color: #4B6587;
+}
+.container>p {
+    /* Chọn hình thức thanh toán */
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    margin: 2% 0 1% 0;
+    /* identical to box height */
+    text-transform: capitalize;
+
+    color: #000000;
 }
 
 /* content */
 #content {
-    display: flex;
+    display: grid;
+    grid-template-columns: 70% 30%;
+    gap: 3%;
+    /* padding: 20px 10%; */
     justify-content: space-between;
 }
-
-#content>div {
-    width: 30%;
+#content .content_main {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    width: 100%;
+    height: 100%;
 }
 
 .sidebar {
     border-radius: 5px 0 0 5px;
-    background-color: rgb(202, 197, 197);
+    background-color: #F1F1F1;
     padding: 50px 0;
 }
 
@@ -51,12 +97,12 @@
 .sidebar li:hover {
     background-color: white;
     cursor: pointer;
-    color: bisque;
+    color: #B9975B;
 }
 
 .active {
     background-color: white;
-    color: bisque;
+    color: #B9975B;
 }
 
 .sidebar li i {
@@ -65,16 +111,21 @@
 
 .content-page {
     border-radius: 0 5px 5px 0;
-    border-top: 2px solid rgb(200, 197, 197);
-    border-bottom: 2px solid rgb(200, 197, 197);
-    border-right: 2px solid rgb(200, 197, 197);
+    border-top: 2px solid #F1F1F1;
+    border-bottom: 2px solid #F1F1F1;
+    border-right: 2px solid #F1F1F1;
     padding: 15px;
 }
 
 .content-page>div .header-page {
-    font-weight: 600;
-
-
+    font-weight: 500;
+    font-size: 16.2px;
+    line-height: 24px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+.content-page p {
+    margin-bottom: 10px;
 }
 
 .content-page>div>input {
@@ -83,66 +134,99 @@
 }
 
 input {
-    outline: none;
-    padding: 10px 5px;
-    border: 1px solid #333;
+    box-sizing: border-box;
+    width: 371.7px;
+    height: 45px;
+    padding: 10px;
+
+    background: #FFFFFF;
+    border: 0.9px solid #D1D1D1;
     border-radius: 5px;
 
-}
+    /* Số thẻ */
+    font-weight: 300;
+    font-size: 10.8px;
+    line-height: 16px;
+    text-transform: capitalize;
 
-.content-page {
-    flex: 1;
-    margin-right: 10px;
+    color: #878787;
 }
 
 .input_bt {
     margin-top: 15px;
     display: flex;
-}
-
-.input_bt>input:last-child {
-    width: 70%;
-    margin-left: 5px;
-}
-
-.input_bt>input:first {
-    flex: 1;
+    gap: 10px;
 }
 
 .btn-primary {
+    cursor: pointer;
     float: right;
     color: white;
     margin-top: 20px;
-    width: 200px;
-    background-color: rgb(51, 8, 126)
+
+    background: #4B6587;
+    border-radius: 5px;
+    padding: 10px 30px;
+    /* thanh toán */
+    font-weight: 300;
+    font-size: 16.2px;
+    line-height: 20px;
+    /* identical to box height, or 122% */
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
 }
 
 .payment {
-    padding: 15px;
-    background: bisque;
-    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    padding: 20px;
+    background-color: #F0E5CF;
+    border-radius: 5px;    
 }
 
 .payment>div {
     display: flex;
-    align-items: center;
+    position: relative;
     justify-content: space-between;
+    flex-direction: column;
 }
-
-.payment>div>p {
-    margin-top: 10px;
-}
-
 
 .payment_h>p,
 .payment_b>p,
 .payment_b>span {
-    font-weight: 600;
+    /* thanh toán */
+    font-weight: 500;
+    font-size: 16.2px;
+    line-height: 20px;
+
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
 }
 
-.payment_t,
+.payment_t {
+    padding: 10px 0;
+    margin: 10px 0;
+    height: 50%;
+}
+.payment_h {
+    border-bottom: 1px solid #d6d6d6;
+    padding-bottom: 10px;
+}
 .payment_b {
-    margin-top: 50px;
+    border-top: 1px solid #d6d6d6;
+    padding-top: 10px;
+}
+
+p.payment_split {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: center;
 }
 
 .p2 {
@@ -151,7 +235,7 @@ input {
 
 .img_none {
     height: 200px;
-    background-color: rgb(202, 197, 197);
+    background-color: #F1F1F1;
 }
 
 .radio-gr {

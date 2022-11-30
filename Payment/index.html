@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Giỏ hàng</title>
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <link rel="stylesheet" href="./style.css">
 
@@ -19,82 +19,86 @@
             <h2>GIỎ HÀNG</h2>
             <div></div>
         </div>
-        <button style="opacity:0.7" type="button" class="btn btn-light"> <i style="margin-right: 5px;"
-                class="fa-solid fa-chevron-left"></i>QUAY
-            LẠI</button>
-        <p style="font-weight:600;margin-top: 20px">CHỌN HÌNH THỨC THANH TOÁN</p>
+        <button style="opacity:0.7" type="button" class="btn btn-light" onclick="QUAY_LẠI_MUA_HÀNG()"> <i style="margin-right: 5px;"
+                class="fa-solid fa-chevron-left"></i>QUAY LẠI</button>
+        <script>
+            function QUAY_LẠI_MUA_HÀNG() {
+                history.back();
+            }
+        </script>
+
+        <p>chọn hình thức thanh toán</p>
         <div id="content">
-            <div class="sidebar">
-                <ul id="sidebar-ct">
-                    <li class="creddit"><i class="fa-sharp fa-solid fa-credit-card"></i>THẺ NGÂN HÀNG</li>
-                    <li class="cash"><i class="fa-solid fa-sack-dollar"></i>TIỀN MẶT</li>
-                    <li class="wallet"><i class="fa-solid fa-wallet"></i>VÍ ĐIỆN TỬ</li>
-                    <li class="banking"><i class="fa-solid fa-building-columns"></i>BANKING</li>
-                </ul>
-            </div>
-            <div class="content-page">
-                <div id="content-page1">
-                    <p class="header-page">THẺ NGÂN HÀNG</p>
-                    <input type="text" placeholder="Số Thẻ">
-                    <input type="text" placeholder="Tiền Thẻ">
-                    <div class="input_bt"><input type="text" placeholder="Hạn Thẻ (MM/YY)">
-                        <input type="text" placeholder="CVV">
+            <div class="content_main">
+                <div class="sidebar">
+                    <ul id="sidebar-ct">
+                        <li class="creddit"><i class="fa-sharp fa-solid fa-credit-card"></i>THẺ NGÂN HÀNG</li>
+                        <li class="cash"><i class="fa-solid fa-sack-dollar"></i>TIỀN MẶT</li>
+                        <li class="wallet"><i class="fa-solid fa-wallet"></i>VÍ ĐIỆN TỬ</li>
+                        <li class="banking"><i class="fa-solid fa-building-columns"></i>BANKING</li>
+                    </ul>
+                </div>
+                <div class="content-page">
+                    <div id="content-page1">
+                        <p class="header-page">THẺ NGÂN HÀNG</p>
+                        <input type="text" placeholder="Số Thẻ">
+                        <input type="text" placeholder="Tiền Thẻ">
+                        <div class="input_bt"><input type="text" placeholder="Hạn Thẻ (MM/YY)">
+                            <input type="text" placeholder="CVV">
+                        </div>
                     </div>
-                </div>
-                <div id="content-page2">
-                    <p class="header-page">TIỀN MẶT</p>
-                    <P style="font-weight: 300;">Là Phương Thức Thanh Toán Bằng Tiền Mặt Trực Tiếp Khi Nhận
-                        Hàng</P>
-                    <div class="img_none">
+                    <div id="content-page2">
+                        <p class="header-page">TIỀN MẶT</p>
+                        <P style="font-weight: 300;">Là Phương Thức Thanh Toán Bằng Tiền Mặt Trực Tiếp Khi Nhận
+                            Hàng</P>
+                        <div class="img_none">
+                        </div>
                     </div>
-                </div>
-                <div id="content-page3">
-                    <p class="header-page">VÍ ĐIỆN TỬ</p>
-                    <div class="radio-gr">
-                        <input class="checkbox" type="checkbox" name="vehicle1" value="HTML">
-                        <label for="html">Momo</label><br>
-                        <input class="checkbox checkbox-last" type="checkbox" name="vehicle1" value="CSS">
-                        <label for="css">ZaloPay</label><br>
+                    <div id="content-page3">
+                        <p class="header-page">VÍ ĐIỆN TỬ</p>
+                        <div class="radio-gr">
+                            <input class="checkbox" type="checkbox" name="vehicle1" value="HTML">
+                            <label for="html">Momo</label><br>
+                            <input class="checkbox checkbox-last" type="checkbox" name="vehicle1" value="CSS">
+                            <label for="css">ZaloPay</label><br>
+                        </div>
+                        <p>Sau khi hoàn tất đơn hàng thực hiện chuyển số tiền tương ứng cần thanh toán với nội dung: SC #tên
+                            người nhận</p>
+                        <p>Thông tin tài khoản:</p>
+                        <p>Số TK: 0912345678</p>
+                        <p>Chủ TK: CUA HANG SUN CAKE</p>
+
+                        <p class="rs">Sau khi shop nhận được số tiền chuyển khoản, chúng tôi sẽ chủ động liên hệ tới bạn
+                            trong thời gian sớm nhất.</p>
+
                     </div>
-                    <p>Sau khi hoàn tất đơn hàng thực hiện chuyển số tiền tương ứng cần thanh toán với nội dung: SC #tên
-                        người nhận</p>
-                    <p class="infor-account">Thông tin tài khoản:</p>
-                    <p style="margin-top: -15px;">Số TK: 0912345678</p>
-                    <p style="margin-top: -15px;">Chủ TK: CUA HANG SUN CAKE</p>
+                    <div id="content-page4">
+                        <p class="header-page">TÀI KHOẢN NGÂN HÀNG</p>
+                        <p>Sau khi hoàn tất đơn hàng thực hiện chuyển số tiền tương ứng cần thanh toán với nội dung: SC #tên
+                            người nhận</p>
+                        <p>Thông tin tài khoản:</p>
+                        <p>Ngân Hàng Vietcombank - SAI GON - TRU SO CN</p>
+                        <p>Số TK: 102633****</p>
+                        <p>Chủ TK: CUA HANG SUN CAKE</p>
 
-                    <p class="rs">Sau khi shop nhận được số tiền chuyển khoản, chúng tôi sẽ chủ động liên hệ tới bạn
-                        trong thời gian sớm nhất.</p>
+                        <p class="rs">Sau khi shop nhận được số tiền chuyển khoản, chúng tôi sẽ chủ động liên hệ tới bạn
+                            trong thời gian sớm nhất.</p>
 
+                    </div>
+                    <button type="button" class="btn btn-primary">THANH TOÁN</button>
                 </div>
-                <div id="content-page4">
-                    <p class="header-page">TÀI KHOẢN NGÂN HÀNG</p>
-                    <p>Sau khi hoàn tất đơn hàng thực hiện chuyển số tiền tương ứng cần thanh toán với nội dung: SC #tên
-                        người nhận</p>
-                    <p class="infor-account">Thông tin tài khoản:</p>
-                    <p style="margin-top: -15px;">Ngân Hàng Vietcombank - SAI GON - TRU SO CN</p>
-                    <p style="margin-top: -15px;">Số TK: 102633****</p>
-                    <p style="margin-top: -15px;">Chủ TK: CUA HANG SUN CAKE</p>
-
-                    <p class="rs">Sau khi shop nhận được số tiền chuyển khoản, chúng tôi sẽ chủ động liên hệ tới bạn
-                        trong thời gian sớm nhất.</p>
-
-                </div>
-                <button type="button" class="btn btn-primary">THANH TOÁN</button>
-
             </div>
             <div class="payment">
                 <div class="payment_h">
                     <p>THANH TOÁN</p>
                 </div>
                 <div class="payment_t">
-                    <p>TỔNG CỘNG:</p><span>200.000đ</span>
-                </div>
-                <div>
-                    <p>PHÍ VẬN CHUYỂN:</p><span>10.000đ</span>
+                    <p class="payment_split">TỔNG CỘNG:<span>200.000đ</span></p>
+                    <p class="payment_split">PHÍ VẬN CHUYỂN:<span>10.000đ</span></p>
                 </div>
 
                 <div class="payment_b">
-                    <p>TỔNG THANH TOÁN</p><span>210.000đ</span>
+                    <p class="payment_split">TỔNG THANH TOÁN: <span>210.000đ</span></p>
                 </div>
 
             </div>
